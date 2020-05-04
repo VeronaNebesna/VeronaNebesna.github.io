@@ -89,5 +89,5 @@ body{
     height: 40px;
     width: 40px;
     border: none;
-    margin-left: 15px;
+    float:right;
 }
