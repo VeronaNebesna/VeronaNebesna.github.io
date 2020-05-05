@@ -6,7 +6,7 @@ body{
     background-image: url(images/patt.png);
 }
 .header{
-    background-color: rgba(204, 221, 239, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 25px 0;
 }
 .container{
@@ -28,6 +28,11 @@ body{
 .menu li{
     width: 25%;
     float: left;
+    position: relative;
+  
+}
+.menu li:first-child{
+    border-left: 1px solid rgb(44, 112, 183);
 }
 .row:after, .menu:after{
     content: "";
@@ -35,6 +40,7 @@ body{
     clear: both;
 }
 .menu a{
+    border-right: 1px solid rgb(44, 112, 183);
     display: block;
     height: 50px;
     text-align: center;
@@ -43,51 +49,94 @@ body{
     font-weight: 300;
     font-size: 21px;
     color: rgb(44, 112, 183);
-    border-right: 1px solid rgb(44, 112, 183);
 }
-.menu li:first-child{
-    border-left: 1px solid rgb(44, 112, 183);
-}
+
 .menu a:hover{
     background-color: rgb(44, 112, 183);
     color: rgb(255, 255, 255)
 }
 
-.col-search_form{
+.col-9{
     width: 80%;
 }
-.col-basket_form{
+.col-3{
     width: 20%;
+    position:relative;
 }
-.col-search_form form{
-    line-height:50px;
-    position: relative;
+.search {
+   width: 200px;
+   height: 40px;
+   border: 1px solid rgb(44, 112, 183);
+   margin-top:5px;
+   margin-left:30px;
+   position: relative;
 }
-.col-search_form input{
-    width: 200px;
-    height: 40px;
-    margin-left: 30px;
+.search input{
+    height: 39px;
+    width: 165px;
+    border:none;
     padding-left: 5px;
-    background-color: rgba(255, 255, 255, 0);
-    border: 1px solid rgb(44, 112, 183);
+    background-color:rgba(44, 112, 183, 0)
 }
-.col-search_form button{
-    border: none;
-    width: 30px;
+.search button{
+    background: rgb(44, 112, 183) url(images/search.png) no-repeat 50% 50%;
+    border:none;
     height: 30px;
+    width: 30px;
     position: absolute;
-    right:10px;
-    top:11px;
-    background-color: rgb(44, 112, 183);
+    top:4px;
+    right: 4px;
 }
-
-.col-basket_form form{
-    height: 50px;
-    padding-top: 5px;
+.cart{
+    width:40px;
+    height:40px;
+    background: rgb(255, 255, 255) url(images/cart.png) no-repeat 50% 50%;
+    margin-top:5px;
+    float: right;
+   
 }
-.col-basket_form button{
-    height: 40px;
-    width: 40px;
-    border: none;
-    float:right;
+.product_count{
+    width:15px;
+    height:15px;
+    background-color:rgb(44, 112, 183);
+    border-radius: 10px;
+    text-align:center;
+    line-height:15px;
+    color:rgb(255, 255, 255);
+    font-size:13px;
+    position:absolute;
+    top:0;
+    left:10px;
+}
+.sub-menu{
+    width: 286px;
+    position:absolute;
+    left:-1px;
+    visibility: hidden;
+    opacity:0;
+    z-index:10;
+ 
+}
+.sub-menu > li{
+    float:none;
+    width: 286px;
+}
+.sub-menu li:first-child{
+    border:none;
+}
+.sub-menu a{
+    display:block;
+    border:none;
+    background-color:rgb(44, 112, 183);
+    color:rgb(255, 255, 255);
+    line-height:40px;
+    height:40px;
+}
+.sub-menu a:hover{
+    background-color:rgb(255, 255, 255);
+    color:rgb(44, 112, 183);
+}
+li:hover > .sub-menu{
+    visibility:visible;
+    opacity:1;
 }
