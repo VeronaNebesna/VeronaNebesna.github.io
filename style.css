@@ -34,11 +34,7 @@ body{
 .menu li:first-child{
     border-left: 1px solid rgb(44, 112, 183);
 }
-.row:after, .menu:after{
-    content: "";
-    display: block;
-    clear: both;
-}
+
 .menu a{
     border-right: 1px solid rgb(44, 112, 183);
     display: block;
@@ -48,14 +44,29 @@ body{
     line-height: 50px;
     font-weight: 300;
     font-size: 21px;
-    color: rgb(44, 112, 183);
+    color: rgb(255, 255, 255);
 }
 
-.menu a:hover{
+.menu li:hover{
     background-color: rgb(44, 112, 183);
     color: rgb(255, 255, 255)
 }
-
+.arrow {
+    float: right;
+    margin-top: 22px;
+    margin-right: 10px;
+    height: 7px;
+    width: 10px;
+    background: url(images/arrow.png) no-repeat ;
+}
+.menu li:hover .arrow{
+    background: url(images/arrow_white.png) no-repeat ;
+  }
+.row:after, .menu ul:after, .all_products:after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .col-9{
     width: 80%;
 }
@@ -109,7 +120,6 @@ body{
     left:10px;
 }
 .sub-menu{
-    width: 286px;
     position:absolute;
     left:-1px;
     visibility: hidden;
@@ -119,7 +129,7 @@ body{
 }
 .sub-menu > li{
     float:none;
-    width: 286px;
+    width: 200%;
 }
 .sub-menu li:first-child{
     border:none;
@@ -139,4 +149,178 @@ body{
 li:hover > .sub-menu{
     visibility:visible;
     opacity:1;
+}
+/*-----------------------Products------------------------*/
+.top_name{
+    padding:30px 0 0 30px;
+    width:100%;
+    height: 164px;
+}
+.top_name a{
+    text-decoration:none;
+    color:rgba(255, 255, 255, 0.5);
+}
+.top_name span{
+    color:rgba(255, 255, 255, 0.5);
+    text-decoration:underline;
+}
+.name{
+    position:relative;
+
+}
+.name > a{
+    display:block;
+    color:rgb(255, 255, 255);
+    text-decoration:none;
+    font-weight:600;
+    font-size:40px;
+    margin-top:30px;
+}
+
+.name select{
+    position: absolute;
+    right:0;
+    top:0;
+    width: 270px;
+    height: 40px;
+    background-color:rgb(44, 112, 183);
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+
+
+.nav{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 800px;
+}
+
+.col-md-9{
+    width: 75%;
+}
+.all_products{
+    width: 100%;
+}
+.col-3_3{
+    width: 33%;
+}
+
+.device{
+    width: 270px;
+    height: 650px;
+    background-color: rgba(44, 112, 183, 0.75);
+    margin-left:30px;
+    margin-bottom: 30px;
+}
+.img{
+    background:rgba(255, 255, 255, 0.7) no-repeat;
+    width: 100%;
+    height: 178px;
+    position:relative;
+}
+.screen{
+  width:100%;
+  height:100%;
+}
+
+.screen img{
+    top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  margin: auto;
+  position: absolute;
+}
+.square{
+    background:url(images/square_blue.png) no-repeat 50% 50%;
+    position:absolute;
+    top:10px;
+    right:10px;
+    width: 28px;
+    height:28px;
+    border:1px solid rgb(44, 112, 183);
+}
+.square:hover{
+    background-color:rgb(44, 112, 183);
+    background-image:url(images/square_white.png);
+}
+.like{
+    background: url(images/like_blue.png) no-repeat 50% 50%;
+    position:absolute;
+    top:48px;
+    right:10px;
+    height:28px;
+    width:28px;
+    border:1px solid rgb(44, 112, 183)
+}
+.like:hover{
+    background-color:rgb(44, 112, 183);
+    background-image:url(images/like_white.png);
+}
+.description p{
+    color:rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-left:10px
+}
+.description p b{
+    font-weight:bold;
+}
+.description p:first-child{
+    font-size:28px;
+    font-weight: bold;
+    padding: 10px;
+}
+.description p:nth-child(2){
+    font-size:15px;
+    line-height: 20px;
+    padding: 5px;
+}
+.price{
+    width: 170px;
+    margin:0 auto;
+    padding: 20px 0;
+    font-size: 46px;
+    color:rgb(255, 255, 255);
+}
+.price_1{
+    position: relative;
+    text-align:center;
+}
+.price_2{
+    position: absolute;
+    top:0;
+    right:0px;
+    font-size:20px
+}
+.buttons{
+    width:210px;
+    margin:0 auto;
+}
+.buttons button{
+    width:100%;
+    height: 48px;
+    margin-bottom:30px;
+    cursor:pointer;
+   
+}
+.buttons button:first-child, .buttons button:last-child{
+    background-color: rgba(255, 255, 255, 0);
+    border:1px solid rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    font-weight:600;
+    font-size:18px; 
+   
+}
+.buttons button:last-child{
+    background-color: rgba(255, 255, 255, 0.3);
+    position:relative;
+}
+.cart_2{
+    width:40px;
+    height:40px;
+    background: url(images/cart_2.png) no-repeat 50% 50%;
+    position: absolute;
+    top:0px;
+    right:0px;
 }
