@@ -251,54 +251,69 @@ li:hover > .sub-menu{
     background-color: rgb(44, 113, 184);
     background-image: url(images/like_white.png);
 }
-/*
-
-.description p{
+.product_body{
+    padding:5px 0px 0px 10px;
+}
+.product_body p{
     color:rgb(255, 255, 255);
-    padding-top: 20px;
-    padding-left:10px
+    font-size:20px;
+    padding:5px;
+
 }
-.description p b{
-    font-weight:bold;
+.product_body p:first-child{
+    font-weight: 600;
+    font-size:21pt;
 }
-.description p:first-child{
-    font-size:28px;
-    font-weight: bold;
-    padding: 10px;
-}
-.description p:nth-child(2){
-    font-size:15px;
-    line-height: 20px;
-    padding: 5px;
+.product_body p b{
+    font-weight: 600;
+    text-transform:uppercase;
 }
 .price{
-    width: 170px;
-    margin:0 auto;
-    padding: 20px 0;
-    font-size: 46px;
-    color:rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size:45px;
+    font-weight:600;
+    margin:25px;
 }
-.price_1{
-    position: relative;
-    text-align:center;
+sup{
+    vertical-align: super;
+    font-size:20px;
+    font-weight:300;
+    padding-left:5px;
 }
-.price_2{
-    position: absolute;
-    top:0;
-    right:0px;
-    font-size:20px
-}
-.buttons{
+.button{
     width:210px;
     margin:0 auto;
 }
-.buttons button{
+.button button{
     width:100%;
-    height: 48px;
-    margin-bottom:30px;
+    height:48px;
+    margin-top:30px;
     cursor:pointer;
-   
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    font-weight: 600;
+    font-size:18px;
+    padding: 0;
 }
+.button button:last-child{
+    position:relative;
+}
+.cart_1{
+    background: url(images/cart_2.png) no-repeat 50% 50%;
+    position:absolute;
+    right:10px;
+    top:0;
+    width:30px;
+    height:45px
+}
+.button button:hover{
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+/*
+
 .buttons button:first-child, .buttons button:last-child{
     background-color: rgba(255, 255, 255, 0);
     border:1px solid rgb(255, 255, 255);
