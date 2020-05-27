@@ -208,14 +208,14 @@ label span{
     width: 200px;
     margin:0 auto;
 }
-button{
+.button_filters{
     margin-top: 30px;
     height: 48px;
     width: 200px;
     border:1px solid rgb(255, 255, 255);
     background-color: rgba(44, 113, 184, 1);
 }
-button > span{
+.button_filters > span{
     color: rgb(255, 255, 255);
     text-transform:uppercase;
     text-align: center;
