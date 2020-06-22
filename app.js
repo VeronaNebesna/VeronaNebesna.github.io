@@ -5,7 +5,7 @@ let cart_img = document.querySelector('.cart')
 console.log(cart_count);
 console.log(cart_img);
 cart_img.addEventListener("click",numberChange);
-let i=0;
+let i=1;
 function numberChange(){
     cart_count.innerHTML = i++
 }
