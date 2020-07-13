@@ -311,7 +311,7 @@ label span{
     background-color: rgb(44, 113, 184);
     background-image: url(images/square_white.png);
 }
-.like:hover{
+.like:hover, .liked{
     background-color: rgb(44, 113, 184);
     background-image: url(images/like_white.png);
 }
@@ -377,3 +377,91 @@ sup{
     background-color: rgba(255, 255, 255, 0.5)
 }
 
+
+
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index:100;
+    display: none;
+}
+.modal-block{
+    width: 300px;
+    margin: 80px auto;
+    height: 200px;
+    border:1px solid grey;
+    background-color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    
+}
+.form-fields{
+    margin:10px 0;
+}
+.form-fields input{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+
+}
+
+.btn-close{
+    text-align: right;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.slider_border{
+    border-bottom:1px solid white;
+}
+.slider-block > div{
+    padding: 150px 0;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-size:50px
+}
+
+.slick-dots li button::before{
+    content:"■";
+    font-size: 20px;
+    color: white;
+}
+li.slick-active{
+    color: white;
+}
+.slick-dots{
+    margin-bottom: 10px;
+}
+
+
+.calc_buttons{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-bottom:20px;
+    font-size:20px;
+}
+.num{
+    color:rgb(255, 255, 255);
+}
+.plus, .minus{
+    width: 20px;
+    height:20px;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(255, 255, 255,0.5);
+}
+.plus:hover, .minus:hover{
+    color: rgb(255, 255, 255);
+}
