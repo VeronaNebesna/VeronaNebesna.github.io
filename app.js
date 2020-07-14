@@ -115,52 +115,54 @@ $(".slider-block").slick({
 
 // ------------------CALCULATOR-------
 
-let plusBtn = document.querySelectorAll(".plus");
-console.log(plusBtn);
 
 
-let  minusBtn = document.querySelectorAll(".minus");
-// console.log(minusBtn);
 
-let calcNum = document.querySelectorAll(".num");
-// console.log(calcNum);
+let  decrementBtn = document.querySelectorAll(".decrement-btn");
+// console.log(decrementBtn);
 
+let incrementBtn = document.querySelectorAll(".increment-btn");
+// console.log(incrementBtn);
 
-// ----- #1-------
+let productQuantity = document.querySelectorAll(".product-quantity input");
+// console.log(productQuantity);
 
-for(let i=0; i<plusBtn.length; i++){
-plusBtn[i].addEventListener("click",function(){
-    calcNum[i].innerText = +calcNum[i].innerText +1;
-})
+function toggleBtnState(count,i){
+    if(count <=1){
+        decrementBtn[i].disabled = true;
+     }else{
+         decrementBtn[i].disabled = false;
+       
+     }
 }
 
-for(let i=0; i<plusBtn.length; i++){
-minusBtn[i].addEventListener("click",function(){
-    calcNum[i].innerText = +calcNum[i].innerText -1;
-    if(calcNum[i].innerText  < 0){
-        calcNum[i].textContent = 0;
+
+function toggleMaxCount(count, i){
+    if(count >=5){
+        incrementBtn[i].disabled = true;
+    }else{
+        incrementBtn[i].disabled = false;
     }
-})
 }
 
+for(let i=0; i<incrementBtn.length; i++){
+    incrementBtn[i].addEventListener("click",function(){
+        let valueNum = +productQuantity[i].value;
+        let nextCount = valueNum  + 1;
+        productQuantity[i].value = nextCount;
+        toggleBtnState(nextCount,i);
+        toggleMaxCount(nextCount, i);
+       })
+    }
 
-
-// ----- #2-------
-
-// for(let i=0; i<plusBtn.length; i++){
-// plusBtn[i].addEventListener("click",function(){
-//     console.log(calcNum)
-//     let numberIndicator = +calcNum[i].textContent;
-//     calcNum[i].textContent= numberIndicator +1 ;
-// })
-// }
-// for(let i=0; i<plusBtn.length; i++){
-// minusBtn[i].addEventListener("click",function(){
-//     let numberIndicator = +calcNum[i].textContent;
-//     calcNum[i].textContent= numberIndicator -1;
-//     if(calcNum[i].textContent <0){
-//         calcNum[i].textContent = numberIndicator;
-//     }
-//  })
-// }
-
+for(let i=0; i<decrementBtn.length; i++){
+    decrementBtn[i].addEventListener("click",function(){
+        let valueNum = +productQuantity[i].value
+        let nextCount = valueNum  - 1;
+        productQuantity[i].value = nextCount;
+        toggleBtnState(nextCount,i);
+        toggleMaxCount(nextCount, i);
+        
+    })
+}
+    

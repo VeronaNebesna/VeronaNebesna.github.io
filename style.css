@@ -337,7 +337,7 @@ label span{
     color: rgb(255, 255, 255);
     font-size:45px;
     font-weight:600;
-    margin:35px 0 30px 0;
+    margin:35px 0 20px 0;
 }
 sup{
     vertical-align: super;
@@ -468,25 +468,30 @@ li.slick-active{
 }
 
 
-.calc_buttons{
-    width:50%;
+.product-quantity{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 130px;
     margin: 0 auto;
     padding-bottom:20px;
-    font-size:20px;
 }
-.num{
-    color:rgb(255, 255, 255);
-}
-.plus, .minus{
-    width: 20px;
-    height:20px;
-    text-align: center;
-    cursor: pointer;
-    color: rgba(255, 255, 255,0.5);
-}
-.plus:hover, .minus:hover{
+.decrement-btn, .increment-btn{
+    background-color: rgba(255, 255, 255, 0);
     color: rgb(255, 255, 255);
+    border:none;
+    font-size:20px;
+    cursor: pointer;
+}
+.decrement-btn:focus, .increment-btn:focus{
+    border:none;
+   
+}
+.product-quantity input{
+    text-align: center;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border:none;
+    font-size:20px;
+    color:rgb(255, 255, 255);
 }
