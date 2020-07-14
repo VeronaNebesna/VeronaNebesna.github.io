@@ -10,7 +10,6 @@
     width: 25%;
     float: left;
     position: relative;
-  
 }
 .menu li:first-child{
     border-left: 1px solid rgb(44, 112, 183);
@@ -186,6 +185,7 @@ label span{
     margin:0 auto;
 }
 .button_filter{
+    cursor: pointer;
     margin-top: 30px;
     height: 48px;
     width: 200px;
@@ -484,7 +484,6 @@ li.slick-active{
     padding-top:60px;
 }
 .load_more p{
-    
     color: rgb(255, 255, 255);
     font-size: 30px;
     font-weight: 300;
