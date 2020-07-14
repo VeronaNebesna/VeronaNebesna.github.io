@@ -1,30 +1,11 @@
-*{
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Roboto', sans-serif;
-    background-image: url(images/patt.png);
-}
-.header{
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 25px 0;
-}
-.container{
-    width: 1170px;
-    margin: 0 auto;
-}
+
+/* -----------------------------------H E A D E R---------------------------- */
+/* -------------LOGO--------------- */
 .logo{
     padding-top: 7px;
 }
-.col-md-3{
-    width: 25%;
-}
-.col-md-6{
-    width: 50%;
-}
-[class*="col-"]{
-    float: left;
-}
+
+/* -------------MENU--------------- */
 .menu li{
     width: 25%;
     float: left;
@@ -34,7 +15,6 @@ body{
 .menu li:first-child{
     border-left: 1px solid rgb(44, 112, 183);
 }
-
 .menu a{
     border-right: 1px solid rgb(44, 112, 183);
     display: block;
@@ -46,7 +26,6 @@ body{
     font-size: 21px;
     color: rgb(255, 255, 255);
 }
-
 .menu li:hover{
     background-color: rgb(44, 112, 183);
     color: rgb(255, 255, 255)
@@ -61,19 +40,39 @@ body{
 }
 .menu li:hover .arrow{
     background: url(images/arrow_white.png) no-repeat ;
-  }
+}
 .row:after, .menu ul:after{
     content: "";
     display: block;
     clear: both;
 }
-.col-9{
-    width: 80%;
+
+/* -------------SUB-MENU--------------- */
+.sub-menu > li{
+    float:none;
+    width: 200%;
 }
-.col-3{
-    width: 20%;
-    position:relative;
+.sub-menu li:first-child{
+    border:none;
 }
+.sub-menu a{
+    display:block;
+    border:none;
+    background-color:rgb(44, 112, 183);
+    color:rgb(255, 255, 255);
+    line-height:40px;
+    height:40px;
+}
+.sub-menu a:hover{
+    background-color:rgb(255, 255, 255);
+    color:rgb(44, 112, 183);
+}
+li:hover > .sub-menu{
+    visibility:visible;
+    opacity:1;
+}
+/* -------------SEARCH--------------- */
+
 .search {
    width: 200px;
    height: 40px;
@@ -98,13 +97,14 @@ body{
     top:4px;
     right: 4px;
 }
+
+/* -------------CART-------------- */
 .cart{
     width:40px;
     height:40px;
     background: rgb(255, 255, 255) url(images/cart.png) no-repeat 50% 50%;
     margin-top:5px;
     float: right;
-   
 }
 .prod_count{
     width:15px;
@@ -125,32 +125,9 @@ body{
     visibility: hidden;
     opacity:0;
     z-index:10;
- 
 }
-.sub-menu > li{
-    float:none;
-    width: 200%;
-}
-.sub-menu li:first-child{
-    border:none;
-}
-.sub-menu a{
-    display:block;
-    border:none;
-    background-color:rgb(44, 112, 183);
-    color:rgb(255, 255, 255);
-    line-height:40px;
-    height:40px;
-}
-.sub-menu a:hover{
-    background-color:rgb(255, 255, 255);
-    color:rgb(44, 112, 183);
-}
-li:hover > .sub-menu{
-    visibility:visible;
-    opacity:1;
-}
-/*-----------------------Products------------------------*/
+/* -----------------------------------M A I N ---------------------------- */
+/* ---------FILTERS--------- */
 
 .filters{
     width: 270px;
@@ -222,12 +199,7 @@ label span{
     font-size: 20px;
     font-weight: 600;
 }
-.col-md-9{
-    width:75%;
-}
-.col-md-12{
-    width:100%;
-}
+/* ------BREAD CRUMBS----------- */
 .bread_crumbs{
     padding:30px 0 0 30px;
 }
@@ -239,12 +211,6 @@ label span{
     color:rgba(255, 255, 255, 0.5);
     text-decoration:underline;
 }
-.col-md-8{
-    width:66.6%;
-}
-.col-md-4{
-    width:33.3%;
-}
 
 .name a{
     display:block;
@@ -254,7 +220,7 @@ label span{
     font-size:40px;
     margin:30px 0 17px 30px;
 }
-
+/* --------------SELECT-------- */
 .selectize-control{
    top:30px
 }
@@ -280,6 +246,8 @@ label span{
     background:url(images/arrow_white.png) no-repeat 50% 50%;
     background-size: contain;
 }
+
+/* ------PRODUCTS------ */
 .product{
     background-color: rgba(44, 113, 184, 0.75);
     height:650px;
@@ -304,6 +272,7 @@ label span{
     left:0;
     margin:auto;
 }
+
 .light_box{
     background: url(images/square_blue.png) no-repeat 50% 50%;
     border:1px solid rgb(44, 113, 184);
@@ -367,7 +336,6 @@ sup{
 .button button{
     width:100%;
     height:48px;
-    
     cursor:pointer;
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgb(255, 255, 255);
@@ -393,7 +361,7 @@ sup{
 }
 
 
-
+/* -------------------------MODAL WINDOW------------ */
 .modal{
     position: fixed;
     top:0;
@@ -412,7 +380,6 @@ sup{
     padding: 15px;
     box-sizing: border-box;
     background-color: rgba(44, 113, 184, 1);
-    
 }
 form{
     position: relative;
@@ -427,7 +394,6 @@ form h3{
     width: 100%;
     height: 30px;
     padding: 5px;
-
 }
 form button{
     width: 90px;
@@ -459,7 +425,7 @@ form button:hover{
 .show{
     display: block;
 }
-
+/* ----------------------SLIDER------------- */
 .slider_border{
     border-bottom:1px solid white;
 }
@@ -482,7 +448,7 @@ li.slick-active{
     margin-bottom: 10px;
 }
 
-
+/* ------------CALCULATE OF PRODUCTS ------------ */
 .product-quantity{
     display: flex;
     align-items: center;
@@ -500,7 +466,6 @@ li.slick-active{
 }
 .decrement-btn:focus, .increment-btn:focus{
     border:none;
-   
 }
 .product-quantity input{
     text-align: center;
@@ -509,4 +474,29 @@ li.slick-active{
     border:none;
     font-size:20px;
     color:rgb(255, 255, 255);
+}
+
+
+.load_more{
+    margin:0 auto;
+    width: 200px;
+    height: 30px;
+    padding-top:60px;
+}
+.load_more p{
+    
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 300;
+}
+/* -------------------------FOOTER---------------- */
+
+.footer{
+    height: 100px;
+    background-color: rgb(202,219,237);
+    color:rgb(44, 113, 184);
+    text-align: center;
+    line-height: 100px;
+    font-size: 17px;
+    margin-top: 100px;
 }

@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(images/patt.png);
+}
+.header{
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 25px 0;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.col-md-3{
+    width: 25%;
+}
+.col-md-6{
+    width: 50%;
+}
+[class*="col-"]{
+    float: left;
+}
+.col-9{
+    width: 80%;
+}
+.col-3{
+    width: 20%;
+    position:relative;
+}
+.col-md-9{
+    width:75%;
+}
+.col-md-12{
+    width:100%;
+}
+.col-md-8{
+    width:66.6%;
+}
+.col-md-4{
+    width:33.3%;
+}
+.col-md-12{
+    width: 100%;
+}
