@@ -166,3 +166,8 @@ for(let i=0; i<decrementBtn.length; i++){
     })
 }
     
+// ----------SELECT-------
+
+    $('#select').selectize({
+
+    });

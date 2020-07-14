@@ -254,17 +254,32 @@ label span{
     font-size:40px;
     margin:30px 0 17px 30px;
 }
-.select{
-    margin-top:30px;
-}
-.select select{
-    width:270px;
-    height:40px;
-    background-color:rgba(44, 113, 184, 1);
-    color:rgb(255, 255, 255);
-    padding-left:5px;
-}
 
+.selectize-control{
+   top:30px
+}
+.selectize-control.single .selectize-input{
+    background-color: rgba(44, 113, 184, 0.75);
+    width: 270px;
+    height:35px ;
+    color: rgb(255, 255, 255);
+}
+.selectize-input, .selectize-control.single .selectize-input.input-active{
+    background: rgb(44, 113, 184);
+}
+.selectize-dropdown-content  {
+    background-color: rgb(44, 113, 184);
+    color: rgb(255, 255, 255);
+}
+.selectize-control.single .selectize-input:after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    top:40%;
+    border:none;
+    background:url(images/arrow_white.png) no-repeat 50% 50%;
+    background-size: contain;
+}
 .product{
     background-color: rgba(44, 113, 184, 0.75);
     height:650px;
